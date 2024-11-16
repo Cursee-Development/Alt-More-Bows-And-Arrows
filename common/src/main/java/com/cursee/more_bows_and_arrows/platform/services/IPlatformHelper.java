@@ -1,5 +1,9 @@
 package com.cursee.more_bows_and_arrows.platform.services;
 
+import com.cursee.more_bows_and_arrows.core.tier.ArrowTier;
+import net.minecraft.world.entity.EntityType;
+
+@SuppressWarnings("all")
 public interface IPlatformHelper {
 
     /**
@@ -33,4 +37,6 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    EntityType entityFromTier(ArrowTier tier);
 }
