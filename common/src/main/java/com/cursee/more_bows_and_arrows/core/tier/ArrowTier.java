@@ -11,6 +11,7 @@ public enum ArrowTier {
     COAL(1.0f), // only ignite if hitting netherrack
     COPPER(DamageConstant.LESSER_METAL - 0.5f),
     DIAMOND(DamageConstant.GREATER_GEM),
+    DRAGON_BREATH(DamageConstant.LESSER_GEM), // extra piercing damage
     DRIPSTONE(DamageConstant.LESSER_GEM - 0.5f), // extra piercing damage
     ECHO(DamageConstant.GREATER_GEM), // play sound for player if target is hit
     EGG(1.0f), // chicken
@@ -22,6 +23,7 @@ public enum ArrowTier {
     FLINT_AND_STEEL(2.0f), // ignite on hit
     GLOW_INK_SAC(1.0f), // glow on hit
     GOLD(DamageConstant.LESSER_METAL - 1.0f),
+    ICE(1.0f), // freezing on hit
     INK_SAC(1.0f), // blindness on hit
     IRON(DamageConstant.LESSER_METAL),
     LADDER(0.0f), // tp player on Y axis only
@@ -35,9 +37,12 @@ public enum ArrowTier {
     PRISMARINE(DamageConstant.LESSER_GEM),
     REDSTONE(0.0f), // activate nearby redstone
     SHEAR(0.0f), // shear sheep? idek
+    SHULKER_SHELL(0.0f), // levitation
     SLIMEBALL(0.0f), // slowness effect
+    SMOKING(0.0f), // leaves smoke particle effects behind
     SNOWBALL(0.0f),
     TNT(DamageConstant.LESSER_METAL), // explosion
+    WATER_BOTTLE(1.0f), // explosion
     ;
 
     private final float bonusDamage;

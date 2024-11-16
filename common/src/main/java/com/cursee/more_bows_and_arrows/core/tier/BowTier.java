@@ -9,7 +9,8 @@ public enum BowTier {
     NETHER_WOOD(DamageConstant.NORMAL_WOOD + 0.5f, DurabilityConstant.NORMAL_WOOD + 50),
 
     AMETHYST(DamageConstant.LESSER_GEM, DurabilityConstant.LESSER_GEM),
-    BLAZE_ROD(DamageConstant.GREATER_GEM, 750),
+    BAMBOO(DamageConstant.NORMAL_WOOD, DurabilityConstant.NORMAL_WOOD),
+    BLAZE_ROD(DamageConstant.GREATER_GEM, 750), // all arrows are ignited
     BONE(DamageConstant.LESSER_METAL - 1.5f, DurabilityConstant.LESSER_METAL - 100),
     COPPER(DamageConstant.LESSER_METAL - 1.0f, DurabilityConstant.LESSER_METAL),
 
@@ -18,14 +19,14 @@ public enum BowTier {
     END_STONE(2.0f, 600),
     GOLD(DamageConstant.LESSER_METAL - 0.5f, DurabilityConstant.LESSER_METAL),
 
-    IRON(DamageConstant.LESSER_METAL, DurabilityConstant.LESSER_METAL * 2),
+    IRON(DamageConstant.LESSER_METAL, DurabilityConstant.LESSER_METAL * 2), // ignites flint arrows
     LAPIS(DamageConstant.LESSER_GEM, DurabilityConstant.LESSER_GEM),
-    LIGHTNING_ROD(DamageConstant.LESSER_METAL - 1.0f, DurabilityConstant.LESSER_METAL),
+    LIGHTNING_ROD(DamageConstant.LESSER_METAL - 1.0f, DurabilityConstant.LESSER_METAL), // lightning
     NETHERITE(DamageConstant.GREATER_METAL, DurabilityConstant.GREATER_METAL * 2),
 
     OBSIDIAN(DamageConstant.GREATER_METAL - 1.0f, 750),
-    PAPER(0.0f, 100),
-    PRISMARINE(DamageConstant.LESSER_GEM, DurabilityConstant.LESSER_GEM),
+    PAPER(0.0f, 100), // ??? effect
+    PRISMARINE(DamageConstant.LESSER_GEM, DurabilityConstant.LESSER_GEM), // shoots normally in water?
     ;
 
     private final float bonusDamage;
