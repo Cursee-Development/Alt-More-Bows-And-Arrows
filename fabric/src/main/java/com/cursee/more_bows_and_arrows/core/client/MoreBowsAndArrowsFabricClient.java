@@ -16,8 +16,30 @@ public class MoreBowsAndArrowsFabricClient implements ClientModInitializer {
     }
 
     private static void registerBowItemProperties() {
-        TieredBowUtil.registerItemProperties(ModBowItemsFabric.AMETHYST_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.OAK_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_OAK_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.DARK_OAK_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_DARK_OAK_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.SPRUCE_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_SPRUCE_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.BIRCH_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_BIRCH_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.JUNGLE_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_JUNGLE_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.ACACIA_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_ACACIA_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.MANGROVE_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_MANGROVE_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.CHERRY_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_CHERRY_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.WARPED_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_WARPED_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.CRIMSON_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_CRIMSON_BOW);
         TieredBowUtil.registerItemProperties(ModBowItemsFabric.BAMBOO_BOW);
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.STRIPPED_BAMBOO_BOW);
+
+        TieredBowUtil.registerItemProperties(ModBowItemsFabric.AMETHYST_BOW);
         TieredBowUtil.registerItemProperties(ModBowItemsFabric.BLAZE_ROD_BOW);
         TieredBowUtil.registerItemProperties(ModBowItemsFabric.BONE_BOW);
         TieredBowUtil.registerItemProperties(ModBowItemsFabric.COPPER_BOW);

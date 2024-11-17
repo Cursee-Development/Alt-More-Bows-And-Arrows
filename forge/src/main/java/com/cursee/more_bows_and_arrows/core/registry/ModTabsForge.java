@@ -22,8 +22,30 @@ public class ModTabsForge {
             .build());
 
     public static void addBows(CreativeModeTab.Output output) {
-        output.accept(ModBowItemsForge.AMETHYST_BOW.get());
+        output.accept(ModBowItemsForge.OAK_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_OAK_BOW.get());
+        output.accept(ModBowItemsForge.DARK_OAK_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_DARK_OAK_BOW.get());
+        output.accept(ModBowItemsForge.SPRUCE_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_SPRUCE_BOW.get());
+        output.accept(ModBowItemsForge.BIRCH_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_BIRCH_BOW.get());
+        output.accept(ModBowItemsForge.JUNGLE_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_JUNGLE_BOW.get());
+        output.accept(ModBowItemsForge.ACACIA_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_ACACIA_BOW.get());
+        output.accept(ModBowItemsForge.MANGROVE_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_MANGROVE_BOW.get());
+        output.accept(ModBowItemsForge.CHERRY_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_CHERRY_BOW.get());
+        output.accept(ModBowItemsForge.WARPED_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_WARPED_BOW.get());
+        output.accept(ModBowItemsForge.CRIMSON_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_CRIMSON_BOW.get());
         output.accept(ModBowItemsForge.BAMBOO_BOW.get());
+        output.accept(ModBowItemsForge.STRIPPED_BAMBOO_BOW.get());
+
+        output.accept(ModBowItemsForge.AMETHYST_BOW.get());
         output.accept(ModBowItemsForge.BLAZE_ROD_BOW.get());
         output.accept(ModBowItemsForge.BONE_BOW.get());
         output.accept(ModBowItemsForge.COPPER_BOW.get());

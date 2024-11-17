@@ -20,8 +20,30 @@ public class ModTabsFabric {
             .build());
 
     public static void addBows(CreativeModeTab.Output output) {
-        output.accept(ModBowItemsFabric.AMETHYST_BOW);
+        output.accept(ModBowItemsFabric.OAK_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_OAK_BOW);
+        output.accept(ModBowItemsFabric.DARK_OAK_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_DARK_OAK_BOW);
+        output.accept(ModBowItemsFabric.SPRUCE_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_SPRUCE_BOW);
+        output.accept(ModBowItemsFabric.BIRCH_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_BIRCH_BOW);
+        output.accept(ModBowItemsFabric.JUNGLE_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_JUNGLE_BOW);
+        output.accept(ModBowItemsFabric.ACACIA_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_ACACIA_BOW);
+        output.accept(ModBowItemsFabric.MANGROVE_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_MANGROVE_BOW);
+        output.accept(ModBowItemsFabric.CHERRY_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_CHERRY_BOW);
+        output.accept(ModBowItemsFabric.WARPED_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_WARPED_BOW);
+        output.accept(ModBowItemsFabric.CRIMSON_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_CRIMSON_BOW);
         output.accept(ModBowItemsFabric.BAMBOO_BOW);
+        output.accept(ModBowItemsFabric.STRIPPED_BAMBOO_BOW);
+
+        output.accept(ModBowItemsFabric.AMETHYST_BOW);
         output.accept(ModBowItemsFabric.BLAZE_ROD_BOW);
         output.accept(ModBowItemsFabric.BONE_BOW);
         output.accept(ModBowItemsFabric.COPPER_BOW);

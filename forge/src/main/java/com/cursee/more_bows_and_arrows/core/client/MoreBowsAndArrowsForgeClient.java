@@ -26,8 +26,30 @@ public class MoreBowsAndArrowsForgeClient {
 
     private static void registerBowItemProperties(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            TieredBowUtil.registerItemProperties(ModBowItemsForge.AMETHYST_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.OAK_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_OAK_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.DARK_OAK_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_DARK_OAK_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.SPRUCE_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_SPRUCE_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.BIRCH_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_BIRCH_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.JUNGLE_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_JUNGLE_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.ACACIA_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_ACACIA_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.MANGROVE_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_MANGROVE_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.CHERRY_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_CHERRY_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.WARPED_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_WARPED_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.CRIMSON_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_CRIMSON_BOW.get());
             TieredBowUtil.registerItemProperties(ModBowItemsForge.BAMBOO_BOW.get());
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.STRIPPED_BAMBOO_BOW.get());
+
+            TieredBowUtil.registerItemProperties(ModBowItemsForge.AMETHYST_BOW.get());
             TieredBowUtil.registerItemProperties(ModBowItemsForge.BLAZE_ROD_BOW.get());
             TieredBowUtil.registerItemProperties(ModBowItemsForge.BONE_BOW.get());
             TieredBowUtil.registerItemProperties(ModBowItemsForge.COPPER_BOW.get());
