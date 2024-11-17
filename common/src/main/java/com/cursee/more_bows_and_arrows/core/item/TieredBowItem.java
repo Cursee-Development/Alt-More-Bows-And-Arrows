@@ -23,7 +23,9 @@ public class TieredBowItem extends BowItem {
     @Override
     public int getUseDuration(@NotNull ItemStack itemStack) {
 
-        if (this.tier == BowTier.NETHERITE) return (int) (super.getUseDuration(itemStack) * 0.5f);
+        if (itemStack.getItem() instanceof TieredBowItem tieredBowItem && tieredBowItem.tier == BowTier.NETHERITE) {
+            return 36000;
+        }
 
         return super.getUseDuration(itemStack);
     }

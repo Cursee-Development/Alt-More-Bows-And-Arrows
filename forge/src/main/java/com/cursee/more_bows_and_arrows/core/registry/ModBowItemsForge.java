@@ -26,10 +26,10 @@ public class ModBowItemsForge {
     public static final RegistryObject<Item> CHERRY_BOW = RegistryForge.registerItem("cherry_bow", () -> new TieredBowItem(BowTier.WOOD));
     public static final RegistryObject<Item> STRIPPED_CHERRY_BOW = RegistryForge.registerItem("stripped_cherry_bow", () -> new TieredBowItem(BowTier.STRIPPED_WOOD));
 
-    public static final RegistryObject<Item> WARPED_BOW = RegistryForge.registerItem("warped_stem_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
-    public static final RegistryObject<Item> STRIPPED_WARPED_BOW = RegistryForge.registerItem("stripped_warped_stem_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
-    public static final RegistryObject<Item> CRIMSON_BOW = RegistryForge.registerItem("crimson_stem_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
-    public static final RegistryObject<Item> STRIPPED_CRIMSON_BOW = RegistryForge.registerItem("stripped_crimson_stem_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
+    public static final RegistryObject<Item> WARPED_BOW = RegistryForge.registerItem("warped_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
+    public static final RegistryObject<Item> STRIPPED_WARPED_BOW = RegistryForge.registerItem("stripped_warped_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
+    public static final RegistryObject<Item> CRIMSON_BOW = RegistryForge.registerItem("crimson_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
+    public static final RegistryObject<Item> STRIPPED_CRIMSON_BOW = RegistryForge.registerItem("stripped_crimson_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
 
     public static final RegistryObject<Item> BAMBOO_BOW = RegistryForge.registerItem("bamboo_bow", () -> new TieredBowItem(BowTier.WOOD));
     public static final RegistryObject<Item> STRIPPED_BAMBOO_BOW = RegistryForge.registerItem("stripped_bamboo_bow", () -> new TieredBowItem(BowTier.STRIPPED_WOOD));

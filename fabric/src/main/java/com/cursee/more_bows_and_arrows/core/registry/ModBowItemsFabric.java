@@ -25,10 +25,10 @@ public class ModBowItemsFabric {
     public static final Item CHERRY_BOW = RegistryFabric.registerItem("cherry_bow", () -> new TieredBowItem(BowTier.WOOD));
     public static final Item STRIPPED_CHERRY_BOW = RegistryFabric.registerItem("stripped_cherry_bow", () -> new TieredBowItem(BowTier.STRIPPED_WOOD));
 
-    public static final Item WARPED_BOW = RegistryFabric.registerItem("warped_stem_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
-    public static final Item STRIPPED_WARPED_BOW = RegistryFabric.registerItem("stripped_warped_stem_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
-    public static final Item CRIMSON_BOW = RegistryFabric.registerItem("crimson_stem_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
-    public static final Item STRIPPED_CRIMSON_BOW = RegistryFabric.registerItem("stripped_crimson_stem_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
+    public static final Item WARPED_BOW = RegistryFabric.registerItem("warped_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
+    public static final Item STRIPPED_WARPED_BOW = RegistryFabric.registerItem("stripped_warped_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
+    public static final Item CRIMSON_BOW = RegistryFabric.registerItem("crimson_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
+    public static final Item STRIPPED_CRIMSON_BOW = RegistryFabric.registerItem("stripped_crimson_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
 
     public static final Item BAMBOO_BOW = RegistryFabric.registerItem("bamboo_bow", () -> new TieredBowItem(BowTier.WOOD));
     public static final Item STRIPPED_BAMBOO_BOW = RegistryFabric.registerItem("stripped_bamboo_bow", () -> new TieredBowItem(BowTier.STRIPPED_WOOD));

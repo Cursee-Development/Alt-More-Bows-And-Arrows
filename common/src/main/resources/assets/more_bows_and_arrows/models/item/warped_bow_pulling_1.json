@@ -1,0 +1,6 @@
+{
+    "parent": "more_bows_and_arrows:item/warped_bow",
+    "textures": {
+        "layer0": "more_bows_and_arrows:item/warped_bow_pulling_1"
+    }
+}
