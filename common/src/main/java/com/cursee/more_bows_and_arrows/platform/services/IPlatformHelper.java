@@ -2,6 +2,7 @@ package com.cursee.more_bows_and_arrows.platform.services;
 
 import com.cursee.more_bows_and_arrows.core.tier.ArrowTier;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.item.Item;
 
 @SuppressWarnings("all")
 public interface IPlatformHelper {
@@ -39,4 +40,6 @@ public interface IPlatformHelper {
     }
 
     EntityType entityFromTier(ArrowTier tier);
+
+    Item itemFromTier(ArrowTier tier);
 }
