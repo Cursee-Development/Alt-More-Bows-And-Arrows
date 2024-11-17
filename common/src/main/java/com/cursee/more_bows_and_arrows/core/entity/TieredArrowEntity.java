@@ -16,7 +16,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import org.jetbrains.annotations.NotNull;
 
-@SuppressWarnings("unchecked")
 public class TieredArrowEntity extends AbstractArrow {
 
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE_VARIANT = SynchedEntityData.defineId(TieredArrowEntity.class, EntityDataSerializers.INT);
@@ -24,10 +23,10 @@ public class TieredArrowEntity extends AbstractArrow {
     private final ArrowTier tier;
 
     /** Used when an arrow is registered. */
-    public TieredArrowEntity(EntityType entityType, Level level, ArrowTier tier) {
+    public TieredArrowEntity(EntityType<? extends AbstractArrow> entityType, Level level, ArrowTier tier) {
         super(entityType, level);
         this.tier = tier;
-        this.setVariant(this.tier); // the entity is constructed with a variant, and should logically send the same variant???
+        this.setVariant(this.tier);
         this.setBaseDamage(this.getBaseDamage() + this.tier.bonusDamage());
     }
 
@@ -67,18 +66,16 @@ public class TieredArrowEntity extends AbstractArrow {
 
     @Override
     protected @NotNull ItemStack getPickupItem() {
-        return switch (this.tier) {
-            default -> new ItemStack(Items.ARROW);
-        };
+        return new ItemStack(Services.PLATFORM.itemFromTier(this.tier));
     }
 
     @Override
-    protected void onHitEntity(EntityHitResult $$0) {
+    protected void onHitEntity(@NotNull EntityHitResult $$0) {
         // todo: fill in operations
     }
 
     @Override
-    protected void onHitBlock(BlockHitResult $$0) {
+    protected void onHitBlock(@NotNull BlockHitResult $$0) {
         // todo: fill in operations
     }
 }
