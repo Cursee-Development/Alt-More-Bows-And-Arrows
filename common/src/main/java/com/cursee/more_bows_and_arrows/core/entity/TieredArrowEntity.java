@@ -72,10 +72,13 @@ public class TieredArrowEntity extends AbstractArrow {
     @Override
     protected void onHitEntity(@NotNull EntityHitResult $$0) {
         // todo: fill in operations
+
+        super.onHitEntity($$0);
     }
 
     @Override
     protected void onHitBlock(@NotNull BlockHitResult $$0) {
         // todo: fill in operations
+        super.onHitBlock($$0);
     }
 }

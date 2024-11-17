@@ -9,7 +9,6 @@ public enum BowTier {
     NETHER_WOOD(DamageConstant.NORMAL_WOOD + 0.5f, DurabilityConstant.NORMAL_WOOD + 50),
 
     AMETHYST(DamageConstant.LESSER_GEM, DurabilityConstant.LESSER_GEM),
-    BAMBOO(DamageConstant.NORMAL_WOOD, DurabilityConstant.NORMAL_WOOD),
     BLAZE_ROD(DamageConstant.GREATER_GEM, 750), // all arrows are ignited
     BONE(DamageConstant.LESSER_METAL - 1.5f, DurabilityConstant.LESSER_METAL - 100),
     COPPER(DamageConstant.LESSER_METAL - 1.0f, DurabilityConstant.LESSER_METAL),

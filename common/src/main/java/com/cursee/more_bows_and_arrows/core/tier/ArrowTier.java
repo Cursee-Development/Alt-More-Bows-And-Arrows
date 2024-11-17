@@ -19,13 +19,13 @@ public enum ArrowTier implements StringRepresentable {
     COAL(5, "coal", 1.0f), // only ignite if hitting netherrack
     COPPER(6, "copper", DamageConstant.LESSER_METAL - 0.5f),
     DIAMOND(7, "diamond", DamageConstant.GREATER_GEM),
-    DRAGON_BREATH(8, "dragon_breath", DamageConstant.LESSER_GEM), // extra piercing damage
+    DRAGON_BREATH(8, "dragon_breath", DamageConstant.LESSER_GEM),
     DRIPSTONE(9, "dripstone", DamageConstant.LESSER_GEM - 0.5f), // extra piercing damage
 
     ECHO(10, "echo", DamageConstant.GREATER_GEM), // play sound for player if target is hit
     EGG(11, "egg", 1.0f), // chicken
     EMERALD(12, "emerald", DamageConstant.GREATER_GEM),
-    ENDER_PEARL(13, "ender_pearl", DamageConstant.GREATER_GEM), // tp player to hit pos, or hit to player
+    ENDER_PEARL(13, "ender_pearl", DamageConstant.GREATER_GEM - 1.0f), // tp player to hit pos, or hit to player
     FIREWORK(14, "firework", 1.0f), // launch firework
     FIRE_CHARGE(15, "fire_charge", DamageConstant.LESSER_METAL - 1.5f), // always ignite
     FLINT(16, "flint", DamageConstant.LESSER_METAL - 1.5f), // ignite if paired with iron bow
