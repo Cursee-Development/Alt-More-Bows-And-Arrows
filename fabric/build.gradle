@@ -19,6 +19,9 @@ dependencies {
     implementation project(":common")
 
     modImplementation "curse.maven:monolib-968432:5838445"
+
+    // JEI for testing
+    modImplementation "curse.maven:jei-238222:5846809"
 }
 
 loom {
