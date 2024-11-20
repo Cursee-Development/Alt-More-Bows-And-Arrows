@@ -1,6 +1,9 @@
 {
     "itemGroup.moreBowsAndArrows": "More Bows and Arrows!",
     
+    "item.more_bows_and_arrows.bow_upgrade_template": "Bow Upgrade Template",
+    "item.more_bows_and_arrows.arrow_upgrade_template": "Arrow Upgrade Template",
+
     "item.more_bows_and_arrows.oak_bow": "Oak Bow",
     "item.more_bows_and_arrows.stripped_oak_bow": "Stripped oak Bow",
     "item.more_bows_and_arrows.dark_oak_bow": "Dark Oak Bow",

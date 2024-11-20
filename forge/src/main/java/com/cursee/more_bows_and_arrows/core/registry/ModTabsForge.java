@@ -22,6 +22,9 @@ public class ModTabsForge {
             .build());
 
     public static void addBows(CreativeModeTab.Output output) {
+
+        output.accept(ModBowItemsForge.BOW_UPGRADE_TEMPLATE.get());
+
         output.accept(ModBowItemsForge.OAK_BOW.get());
         output.accept(ModBowItemsForge.STRIPPED_OAK_BOW.get());
         output.accept(ModBowItemsForge.DARK_OAK_BOW.get());
@@ -63,6 +66,9 @@ public class ModTabsForge {
     }
 
     public static void addArrows(CreativeModeTab.Output output) {
+
+        output.accept(ModArrowItemsForge.ARROW_UPGRADE_TEMPLATE.get());
+
         output.accept(ModArrowItemsForge.AMETHYST_ARROW.get());
         output.accept(ModArrowItemsForge.BAMBOO_ARROW.get());
         output.accept(ModArrowItemsForge.BLAZE_ROD_ARROW.get());

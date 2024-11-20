@@ -9,6 +9,8 @@ public class ModBowItemsForge {
 
     public static void register() {}
 
+    public static final RegistryObject<Item> BOW_UPGRADE_TEMPLATE = RegistryForge.registerItem("bow_upgrade_template", () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> OAK_BOW = RegistryForge.registerItem("oak_bow", () -> new TieredBowItem(BowTier.WOOD));
     public static final RegistryObject<Item> STRIPPED_OAK_BOW = RegistryForge.registerItem("stripped_oak_bow", () -> new TieredBowItem(BowTier.STRIPPED_WOOD));
     public static final RegistryObject<Item> DARK_OAK_BOW = RegistryForge.registerItem("dark_oak_bow", () -> new TieredBowItem(BowTier.WOOD));

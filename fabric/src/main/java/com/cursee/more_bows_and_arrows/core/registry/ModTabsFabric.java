@@ -20,6 +20,9 @@ public class ModTabsFabric {
             .build());
 
     public static void addBows(CreativeModeTab.Output output) {
+
+        output.accept(ModBowItemsFabric.BOW_UPGRADE_TEMPLATE);
+
         output.accept(ModBowItemsFabric.OAK_BOW);
         output.accept(ModBowItemsFabric.STRIPPED_OAK_BOW);
         output.accept(ModBowItemsFabric.DARK_OAK_BOW);
@@ -61,6 +64,9 @@ public class ModTabsFabric {
     }
 
     public static void addArrows(CreativeModeTab.Output output) {
+
+        output.accept(ModArrowItemsFabric.ARROW_UPGRADE_TEMPLATE);
+
         output.accept(ModArrowItemsFabric.AMETHYST_ARROW);
         output.accept(ModArrowItemsFabric.BAMBOO_ARROW);
         output.accept(ModArrowItemsFabric.BLAZE_ROD_ARROW);

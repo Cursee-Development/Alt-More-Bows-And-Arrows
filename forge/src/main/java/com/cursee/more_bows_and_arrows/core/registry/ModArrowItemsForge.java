@@ -9,6 +9,8 @@ public class ModArrowItemsForge {
 
     public static void register() {}
 
+    public static final RegistryObject<Item> ARROW_UPGRADE_TEMPLATE = RegistryForge.registerItem("arrow_upgrade_template", () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> AMETHYST_ARROW = RegistryForge.registerItem("amethyst_arrow", () -> new TieredArrowItem(ArrowTier.AMETHYST));
     public static final RegistryObject<Item> BAMBOO_ARROW = RegistryForge.registerItem("bamboo_arrow", () -> new TieredArrowItem(ArrowTier.BAMBOO));
     public static final RegistryObject<Item> BLAZE_ROD_ARROW = RegistryForge.registerItem("blaze_rod_arrow", () -> new TieredArrowItem(ArrowTier.BLAZE_ROD));
