@@ -56,12 +56,16 @@ public class TieredArrowEntity extends AbstractArrow {
         return this.entityData.get(DATA_ID_TYPE_VARIANT);
     }
 
+    private void setVariant(ArrowTier tier) {
+        this.entityData.set(DATA_ID_TYPE_VARIANT, tier.getId() & 255);
+    }
+
     public ArrowTier getVariant() {
         return ArrowTier.byId(this.getTypeVariant() & 255);
     }
 
-    private void setVariant(ArrowTier tier) {
-        this.entityData.set(DATA_ID_TYPE_VARIANT, tier.getId() & 255);
+    public float bonusDamage() {
+        return this.getVariant().bonusDamage();
     }
 
     @Override
