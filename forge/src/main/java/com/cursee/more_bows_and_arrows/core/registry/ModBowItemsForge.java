@@ -33,8 +33,8 @@ public class ModBowItemsForge {
     public static final RegistryObject<Item> CRIMSON_BOW = RegistryForge.registerItem("crimson_bow", () -> new TieredBowItem(BowTier.NETHER_WOOD));
     public static final RegistryObject<Item> STRIPPED_CRIMSON_BOW = RegistryForge.registerItem("stripped_crimson_bow", () -> new TieredBowItem(BowTier.STRIPPED_NETHER_WOOD));
 
-    public static final RegistryObject<Item> BAMBOO_BOW = RegistryForge.registerItem("bamboo_bow", () -> new TieredBowItem(BowTier.WOOD));
-    public static final RegistryObject<Item> STRIPPED_BAMBOO_BOW = RegistryForge.registerItem("stripped_bamboo_bow", () -> new TieredBowItem(BowTier.STRIPPED_WOOD));
+    public static final RegistryObject<Item> BAMBOO_BOW = RegistryForge.registerItem("bamboo_bow", () -> new TieredBowItem(BowTier.BAMBOO));
+    public static final RegistryObject<Item> STRIPPED_BAMBOO_BOW = RegistryForge.registerItem("stripped_bamboo_bow", () -> new TieredBowItem(BowTier.STRIPPED_BAMBOO));
 
     public static final RegistryObject<Item> AMETHYST_BOW = RegistryForge.registerItem("amethyst_bow", () -> new TieredBowItem(BowTier.AMETHYST));
     public static final RegistryObject<Item> BLAZE_ROD_BOW = RegistryForge.registerItem("blaze_rod_bow", () -> new TieredBowItem(BowTier.BLAZE_ROD));
