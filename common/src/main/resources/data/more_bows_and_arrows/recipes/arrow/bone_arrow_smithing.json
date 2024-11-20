@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:bone"
+  },
+  "base": {
+    "item": "minecraft:arrow"
+  },
+  "result": {
+    "count": 4,
+    "item": "more_bows_and_arrows:bone_arrow"
+  },
+  "template": {
+    "item": "more_bows_and_arrows:arrow_upgrade_template"
+  }
+}

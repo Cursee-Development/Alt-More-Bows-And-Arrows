@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:stripped_cherry_log"
+  },
+  "base": {
+    "item": "minecraft:bow"
+  },
+  "result": {
+    "item": "more_bows_and_arrows:stripped_cherry_bow"
+  },
+  "template": {
+    "item": "more_bows_and_arrows:bow_upgrade_template"
+  }
+}

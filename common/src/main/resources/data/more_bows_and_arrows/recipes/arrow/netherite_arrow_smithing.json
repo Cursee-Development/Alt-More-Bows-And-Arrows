@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "more_bows_and_arrows:diamond_arrow"
+  },
+  "result": {
+    "count": 4,
+    "item": "more_bows_and_arrows:netherite_arrow"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

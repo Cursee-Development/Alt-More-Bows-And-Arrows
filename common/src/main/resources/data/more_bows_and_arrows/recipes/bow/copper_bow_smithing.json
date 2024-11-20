@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "base": {
+    "item": "minecraft:bow"
+  },
+  "result": {
+    "item": "more_bows_and_arrows:copper_bow"
+  },
+  "template": {
+    "item": "more_bows_and_arrows:bow_upgrade_template"
+  }
+}

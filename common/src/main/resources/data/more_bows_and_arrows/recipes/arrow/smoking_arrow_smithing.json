@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gunpowder"
+  },
+  "base": {
+    "item": "minecraft:arrow"
+  },
+  "result": {
+    "count": 4,
+    "item": "more_bows_and_arrows:smoking_arrow"
+  },
+  "template": {
+    "item": "more_bows_and_arrows:arrow_upgrade_template"
+  }
+}
