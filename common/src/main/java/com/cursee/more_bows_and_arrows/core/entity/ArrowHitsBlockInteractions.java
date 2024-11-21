@@ -1,25 +1,37 @@
 package com.cursee.more_bows_and_arrows.core.entity;
 
 import com.cursee.more_bows_and_arrows.core.item.TieredBowItem;
+import com.cursee.more_bows_and_arrows.core.util.FireworkUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.Tag;
+import net.minecraft.nbt.TagType;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.FireworkRocketEntity;
+import net.minecraft.world.item.FireworkRocketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
 public class ArrowHitsBlockInteractions {
 
     public static void interact(TieredArrowEntity tieredArrowEntity, @Nullable Entity entity, BlockHitResult blockHitResult) {
 
+
+
         if (!(entity instanceof LivingEntity owner)) return;
 
         ItemStack itemStack = owner.getMainHandItem();
         Item item = itemStack.getItem();
 
-        if (!(item instanceof TieredBowItem tieredBowItem)) return;
+        // if (!(item instanceof TieredBowItem tieredBowItem)) return;
 
         final BlockPos blockPos = blockHitResult.getBlockPos();
         final Direction direction = blockHitResult.getDirection();
@@ -54,8 +66,7 @@ public class ArrowHitsBlockInteractions {
             }
             case ENDER_PEARL -> {
             }
-            case FIREWORK -> {
-            }
+            case FIREWORK -> FireworkUtil.createRandomFireworkFromEntity(owner, blockHitResult);
             case FIRE_CHARGE -> {
             }
             case FLINT -> {
