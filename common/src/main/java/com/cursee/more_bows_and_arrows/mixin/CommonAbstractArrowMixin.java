@@ -16,7 +16,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class CommonAbstractArrowMixin {
 
     /** Occurs when an entity is actually being hurt, after a potion effect would have been applied by an arrow. */
-    @Inject(method = "onHitEntity", at= @At(value = "INVOKE", shift = At.Shift.AFTER, target = "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;doPostHurtEffects(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;)V"))
+    // @Inject(method = "onHitEntity", at= @At(value = "INVOKE", shift = At.Shift.AFTER, target = "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;doPostHurtEffects(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;)V"))
+    @Inject(method = "onHitEntity", at= @At(value = "INVOKE", shift = At.Shift.AFTER, target = "Lnet/minecraft/world/entity/projectile/AbstractArrow;doPostHurtEffects(Lnet/minecraft/world/entity/LivingEntity;)V"))
     private void injected$onHitEntity(EntityHitResult result, CallbackInfo ci) {
 
         AbstractArrow instance = (AbstractArrow) (Object) this;
