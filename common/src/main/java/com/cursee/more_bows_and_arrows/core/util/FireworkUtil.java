@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -21,11 +22,10 @@ import java.util.stream.Collectors;
 
 public class FireworkUtil {
 
-    public static void createRandomFireworkFromEntity(@NotNull LivingEntity owner, BlockHitResult blockHitResult) {
+    public static void createRandomFireworkFromEntity(@NotNull LivingEntity owner, BlockPos blockPos) {
 
         if (!(owner.level() instanceof ServerLevel serverLevel)) return;
 
-        final BlockPos blockPos = blockHitResult.getBlockPos();
         ItemStack fireworkRocketItem = Items.FIREWORK_ROCKET.getDefaultInstance();
 
         fireworkRocketItem = FireworkUtil.addRandomFireworkData(serverLevel.getRandom(), fireworkRocketItem);
