@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "C": {
+      "item": "minecraft:arrow"
+    },
+    "S": {
+      "item": "more_bows_and_arrows:arrow_upgrade_template"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "more_bows_and_arrows:arrow_upgrade_template"
+  },
+  "show_notification": true
+}

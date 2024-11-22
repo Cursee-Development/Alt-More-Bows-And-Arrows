@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:coal"
+  },
+  "base": {
+    "item": "minecraft:arrow"
+  },
+  "result": {
+    "count": 4,
+    "item": "more_bows_and_arrows:coal_arrow"
+  },
+  "template": {
+    "id": "more_bows_and_arrows:arrow_upgrade_template"
+  }
+}

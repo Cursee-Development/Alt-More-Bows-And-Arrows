@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "base": {
+    "item": "minecraft:arrow"
+  },
+  "result": {
+    "count": 4,
+    "item": "more_bows_and_arrows:iron_arrow"
+  },
+  "template": {
+    "id": "more_bows_and_arrows:arrow_upgrade_template"
+  }
+}

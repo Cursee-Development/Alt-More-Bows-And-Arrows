@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:dark_oak_log"
+  },
+  "base": {
+    "item": "minecraft:bow"
+  },
+  "result": {
+    "item": "more_bows_and_arrows:dark_oak_bow"
+  },
+  "template": {
+    "id": "more_bows_and_arrows:bow_upgrade_template"
+  }
+}
