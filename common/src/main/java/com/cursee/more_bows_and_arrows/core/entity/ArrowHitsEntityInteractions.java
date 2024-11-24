@@ -59,7 +59,7 @@ public class ArrowHitsEntityInteractions {
             }
             case FLINT_AND_STEEL -> hitEntity.setRemainingFireTicks(2 * 20);
             case GLOW_INK_SAC -> hitEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 4 * 20, 1));
-            case ICE -> hitEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 4 * 20, 1));
+            case ICE -> hitEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 4 * 20, 1));
             case INK_SAC -> hitEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 4 * 20, 1));
             case LADDER -> player.teleportTo(player.xo, hitEntity.blockPosition().getY(), player.zo);
             case LIGHTNING_ROD -> {
