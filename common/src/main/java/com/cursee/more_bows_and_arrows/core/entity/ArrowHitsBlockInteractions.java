@@ -56,6 +56,7 @@ public class ArrowHitsBlockInteractions {
                 if (( (TieredBowItem) player.getMainHandItem().getItem()).tier != BowTier.BAMBOO) return;
 
                 BlockState state = player.level().getBlockState(blockPos);
+                
                 if (Blocks.BAMBOO.defaultBlockState().canSurvive(player.level(), blockPos)) {
 
                     if (Feature.isDirt(state)) {
