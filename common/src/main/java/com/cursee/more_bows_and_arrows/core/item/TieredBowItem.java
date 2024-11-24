@@ -41,9 +41,14 @@ public class TieredBowItem extends BowItem {
 
         if (!(itemStack.getItem() instanceof TieredBowItem)) return;
 
-        components.add(Component.translatable("lore.more_bows_and_arrows." + this.tier.toString().toLowerCase() + "_bow1"));
-        components.add(Component.translatable("lore.more_bows_and_arrows." + this.tier.toString().toLowerCase() + "_bow2"));
-        components.add(Component.translatable("lore.more_bows_and_arrows." + this.tier.toString().toLowerCase() + "_bow_damage"));
+        BowTier instanceTier = this.tier;
+
+        if (instanceTier == BowTier.BAMBOO) instanceTier = BowTier.WOOD;
+        if (instanceTier == BowTier.STRIPPED_BAMBOO) instanceTier = BowTier.STRIPPED_WOOD;
+        
+        components.add(Component.translatable("lore.more_bows_and_arrows." + instanceTier.toString().toLowerCase() + "_bow1"));
+        components.add(Component.translatable("lore.more_bows_and_arrows." + instanceTier.toString().toLowerCase() + "_bow2"));
+        components.add(Component.translatable("lore.more_bows_and_arrows." + instanceTier.toString().toLowerCase() + "_bow_damage"));
 
         super.appendHoverText(itemStack, $$1, components, $$3);
     }
