@@ -51,8 +51,11 @@ public class ArrowHitsBlockInteractions {
 
         switch (tieredArrowEntity.getVariant()) {
             case BAMBOO -> {
+                
+                if (!(player.getMainHandItem().getItem() instanceof TieredBowItem)) return;
+                if (( (TieredBowItem) player.getMainHandItem().getItem()).tier != BowTier.BAMBOO) return;
+
                 BlockState state = player.level().getBlockState(blockPos);
-                if (player.getMainHandItem().getItem() instanceof  TieredBowItem bow && bow.tier == BowTier.BAMBOO) return;
 
                 if (Blocks.BAMBOO.defaultBlockState().canSurvive(player.level(), blockPos)) {
 
