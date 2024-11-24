@@ -40,10 +40,10 @@ public class ArrowHitsBlockInteractions {
 
         if (!(nullableOwner instanceof Player player)) return;
 
-        ItemStack itemStack = player.getMainHandItem();
-        Item item = itemStack.getItem();
+        Level level = player.level();
 
-        // if (!(item instanceof TieredBowItem tieredBowItem)) return;
+        ItemStack itemStack = player.getMainHandItem();
+        Item playerMainHandItem = itemStack.getItem();
 
         final BlockPos blockPos = blockHitResult.getBlockPos();
         final Direction direction = blockHitResult.getDirection();
@@ -52,55 +52,55 @@ public class ArrowHitsBlockInteractions {
         switch (tieredArrowEntity.getVariant()) {
             case BAMBOO -> {
 
-                if (!(player.getMainHandItem().getItem() instanceof TieredBowItem)) return;
-                if (( (TieredBowItem) player.getMainHandItem().getItem()).tier != BowTier.BAMBOO) return;
+                if (!(playerMainHandItem instanceof TieredBowItem)) return;
+                if (( (TieredBowItem) playerMainHandItem).tier != BowTier.BAMBOO) return;
 
-                BlockState state = player.level().getBlockState(blockPos);
-                
+                BlockState state = level.getBlockState(blockPos);
+
                 if (Blocks.BAMBOO.defaultBlockState().canSurvive(player.level(), blockPos)) {
 
                     if (Feature.isDirt(state)) {
-                        player.level().setBlock(blockPos, Blocks.PODZOL.defaultBlockState(), Block.UPDATE_ALL);
-                        player.level().setBlock(blockPos.above(), Blocks.BAMBOO.defaultBlockState(), Block.UPDATE_ALL);
+                        level.setBlock(blockPos, Blocks.PODZOL.defaultBlockState(), Block.UPDATE_ALL);
+                        level.setBlock(blockPos.above(), Blocks.BAMBOO.defaultBlockState(), Block.UPDATE_ALL);
                     }
                     else if (state.is(Blocks.BAMBOO)) {
-                        player.level().setBlock(blockPos.above(), Blocks.BAMBOO.defaultBlockState(), Block.UPDATE_ALL);
+                        level.setBlock(blockPos.above(), Blocks.BAMBOO.defaultBlockState(), Block.UPDATE_ALL);
                     }
                 }
             }
             case BLAZE_ROD -> CommonEffectsUtil.lightOrIgniteBlock(blockHitResult, player.level());
             case DRAGON_BREATH -> DragonBreathUtil.createAreaEffectCloud(player, blockHitResult.getBlockPos());
             case ECHO -> {
-                if (!(player.level() instanceof ServerLevel serverLevel)) return;
+                if (!(level instanceof ServerLevel serverLevel)) return;
                 serverLevel.playSound(player, blockHitResult.getBlockPos(), SoundEvents.EVOKER_CAST_SPELL, SoundSource.PLAYERS, 1.0f, 1.0f);
             }
             case EGG -> {
                 Chicken chicken = EntityType.CHICKEN.create(player.level());
                 if (chicken != null) {
                     chicken.moveTo(blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
-                    player.level().addFreshEntity(chicken);
+                    level.addFreshEntity(chicken);
                 }
             }
             case ENDER_PEARL -> player.teleportTo(blockPos.getX(), blockPos.getY(), blockPos.getZ());
             case FIREWORK -> FireworkUtil.createRandomFireworkFromEntity(player, blockHitResult.getBlockPos());
             case FIRE_CHARGE -> CommonEffectsUtil.lightOrIgniteBlock(blockHitResult, player.level());
             case FLINT -> {
-                if (player.getMainHandItem().getItem() instanceof TieredBowItem bow && bow.tier == BowTier.IRON) CommonEffectsUtil.lightOrIgniteBlock(blockHitResult, player.level());
+                if (playerMainHandItem instanceof TieredBowItem bow && bow.tier == BowTier.IRON) CommonEffectsUtil.lightOrIgniteBlock(blockHitResult, player.level());
             }
             case FLINT_AND_STEEL -> CommonEffectsUtil.lightOrIgniteBlock(blockHitResult, player.level());
             case LADDER -> player.teleportTo(player.blockPosition().getX(), blockPos.getY(), player.blockPosition().getZ());
             case LIGHTNING_ROD -> CommonEffectsUtil.lightingCausedByPlayer(player, blockPos);
-            case NETHER_STAR -> player.level().explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 4.0f, Level.ExplosionInteraction.TNT);
+            case NETHER_STAR -> level.explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 4.0f, Level.ExplosionInteraction.TNT);
             case PAPER -> PaperEffectsUtil.randomBlockEffects(player, blockHitResult);
             case REDSTONE -> {
-                if (player.level().getBlockState(blockPos).hasProperty(RedStoneOreBlock.LIT)) {
-                    player.level().getBlockState(blockPos).setValue(RedStoneOreBlock.LIT, true);
+                if (level.getBlockState(blockPos).hasProperty(RedStoneOreBlock.LIT)) {
+                    level.getBlockState(blockPos).setValue(RedStoneOreBlock.LIT, true);
                 }
             }
-            case TNT -> player.level().explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 2.0f, Level.ExplosionInteraction.TNT);
+            case TNT -> level.explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 2.0f, Level.ExplosionInteraction.TNT);
             case WATER_BOTTLE -> {
-                if (player.level().getBlockState(blockPos).hasProperty(CampfireBlock.LIT)) {
-                    player.level().getBlockState(blockPos).setValue(CampfireBlock.LIT, false);
+                if (level.getBlockState(blockPos).hasProperty(CampfireBlock.LIT)) {
+                    level.getBlockState(blockPos).setValue(CampfireBlock.LIT, false);
                 }
             }
         }
