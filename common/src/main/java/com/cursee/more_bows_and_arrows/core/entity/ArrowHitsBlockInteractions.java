@@ -102,7 +102,7 @@ public class ArrowHitsBlockInteractions {
             case WATER_BOTTLE -> {
 
                 if (level.getBlockState(blockPos).hasProperty(CampfireBlock.LIT)) {
-                    level.setBlock(blockPos, level.getBlockState(blockPos).setValue(CampfireBlock.LIT, true), Block.UPDATE_ALL_IMMEDIATE);
+                    level.setBlock(blockPos, level.getBlockState(blockPos).setValue(CampfireBlock.LIT, false), Block.UPDATE_ALL_IMMEDIATE);
                 }
 
                 if (level.getBlockState(relative).is(Blocks.FIRE)) {
