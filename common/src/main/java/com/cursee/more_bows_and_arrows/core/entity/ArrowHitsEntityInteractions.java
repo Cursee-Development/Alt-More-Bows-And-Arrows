@@ -75,7 +75,7 @@ public class ArrowHitsEntityInteractions {
                 }
             }
             case SHULKER_SHELL -> hitEntity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 2 * 20, 1));
-            case SLIMEBALL -> hitEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 4 * 20, 4));
+            case SLIMEBALL, SNOWBALL -> hitEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 4 * 20, 3));
             case SMOKING -> {
                 for (int i=0; i<3; ++i) {
                     final double modifier = player.level().random.nextBoolean() ? 1.0D : -1.0D;
