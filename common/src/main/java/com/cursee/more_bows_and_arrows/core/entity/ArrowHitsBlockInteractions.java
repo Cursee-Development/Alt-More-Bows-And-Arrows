@@ -77,7 +77,7 @@ public class ArrowHitsBlockInteractions {
             case EGG -> {
                 Chicken chicken = EntityType.CHICKEN.create(level);
                 if (chicken != null) {
-                    chicken.moveTo(blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+                    chicken.moveTo(relative.getX(), relative.getY(), relative.getZ());
                     level.addFreshEntity(chicken);
                 }
             }
