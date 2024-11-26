@@ -94,13 +94,17 @@ public class ArrowHitsBlockInteractions {
             case PAPER -> PaperEffectsUtil.randomBlockEffects(player, blockHitResult);
             case REDSTONE -> {
                 if (level.getBlockState(blockPos).hasProperty(RedStoneOreBlock.LIT)) {
-                    level.getBlockState(blockPos).setValue(RedStoneOreBlock.LIT, true);
+                    level.setBlock(blockPos, level.getBlockState(blockPos).setValue(RedStoneOreBlock.LIT, true), Block.UPDATE_ALL_IMMEDIATE);
                 }
             }
             case TNT -> level.explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 2.0f, Level.ExplosionInteraction.TNT);
             case WATER_BOTTLE -> {
                 if (level.getBlockState(blockPos).hasProperty(CampfireBlock.LIT)) {
-                    level.getBlockState(blockPos).setValue(CampfireBlock.LIT, false);
+                    level.setBlock(blockPos, level.getBlockState(blockPos).setValue(CampfireBlock.LIT, false), Block.UPDATE_ALL_IMMEDIATE);
+                }
+
+                if (level.getBlockState(relative).is(Blocks.FIRE)) {
+                    level.removeBlock(relative, false);
                 }
             }
         }
