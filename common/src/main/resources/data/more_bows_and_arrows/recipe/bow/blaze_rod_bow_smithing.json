@@ -7,9 +7,9 @@
     "item": "minecraft:bow"
   },
   "result": {
-    "item": "more_bows_and_arrows:blaze_rod_bow"
+    "id": "more_bows_and_arrows:blaze_rod_bow"
   },
   "template": {
-    "id": "more_bows_and_arrows:bow_upgrade_template"
+    "item": "more_bows_and_arrows:bow_upgrade_template"
   }
 }

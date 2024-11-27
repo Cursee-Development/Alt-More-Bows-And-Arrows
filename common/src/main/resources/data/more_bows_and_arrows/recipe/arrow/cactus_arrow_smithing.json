@@ -8,9 +8,9 @@
   },
   "result": {
     "count": 4,
-    "item": "more_bows_and_arrows:cactus_arrow"
+    "id": "more_bows_and_arrows:cactus_arrow"
   },
   "template": {
-    "id": "more_bows_and_arrows:arrow_upgrade_template"
+    "item": "more_bows_and_arrows:arrow_upgrade_template"
   }
 }

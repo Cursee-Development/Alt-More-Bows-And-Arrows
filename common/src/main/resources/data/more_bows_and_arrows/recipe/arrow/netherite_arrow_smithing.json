@@ -8,9 +8,9 @@
   },
   "result": {
     "count": 4,
-    "item": "more_bows_and_arrows:netherite_arrow"
+    "id": "more_bows_and_arrows:netherite_arrow"
   },
   "template": {
-    "id": "minecraft:netherite_upgrade_smithing_template"
+    "item": "minecraft:netherite_upgrade_smithing_template"
   }
 }
