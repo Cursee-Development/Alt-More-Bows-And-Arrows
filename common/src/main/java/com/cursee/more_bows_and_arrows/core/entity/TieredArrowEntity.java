@@ -71,12 +71,12 @@ public class TieredArrowEntity extends AbstractArrow {
 
     @Override
     protected @NotNull ItemStack getDefaultPickupItem() {
-        return new ItemStack(Services.PLATFORM.itemFromTier(this.tier));
+        return getPickupItemFromTier(getVariant());
     }
 
     @Override
     protected @NotNull ItemStack getPickupItem() {
-        return new ItemStack(Services.PLATFORM.itemFromTier(this.tier));
+        return getPickupItemFromTier(getVariant());
     }
 
     protected static @NotNull ItemStack getPickupItemFromTier(ArrowTier tier) {
