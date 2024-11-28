@@ -65,7 +65,10 @@ public class ArrowHitsEntityInteractions {
             case LIGHTNING_ROD -> {
                 if (player.getMainHandItem().getItem() instanceof TieredBowItem tieredBowItem && tieredBowItem.tier == BowTier.LIGHTNING_ROD) tieredArrowEntity.level().explode(player, entityHitResult.getEntity().xo, entityHitResult.getEntity().yo, entityHitResult.getEntity().zo, 4.0f, Level.ExplosionInteraction.TNT);
             }
-            case NETHER_STAR -> player.level().explode(player, hitEntity.blockPosition().getX(), hitEntity.blockPosition().getY(), hitEntity.blockPosition().getZ(), 4.0f, Level.ExplosionInteraction.TNT);
+            case NETHER_STAR -> {
+                player.level().explode(player, hitEntity.blockPosition().getX(), hitEntity.blockPosition().getY(), hitEntity.blockPosition().getZ(), 4.0f, Level.ExplosionInteraction.TNT);
+                tieredArrowEntity.remove(Entity.RemovalReason.DISCARDED);
+            }
             case PAPER -> PaperEffectsUtil.randomEntityEffects(player, hitEntity);
             case SHEAR -> {
                 if (hitEntity instanceof Sheep sheep && sheep.readyForShearing()) {
@@ -82,7 +85,10 @@ public class ArrowHitsEntityInteractions {
                     player.level().addParticle(ParticleTypes.SMOKE, hitEntity.blockPosition().getX(), hitEntity.blockPosition().getY() + 1.0D, hitEntity.blockPosition().getZ(), player.level().random.nextDouble() * modifier, player.level().random.nextDouble() * modifier, player.level().random.nextDouble() * modifier);
                 }
             }
-            case TNT -> player.level().explode(player, hitEntity.blockPosition().getX(), hitEntity.blockPosition().getY(), hitEntity.blockPosition().getZ(), 2.0f, Level.ExplosionInteraction.TNT);
+            case TNT -> {
+                player.level().explode(player, hitEntity.blockPosition().getX(), hitEntity.blockPosition().getY(), hitEntity.blockPosition().getZ(), 2.0f, Level.ExplosionInteraction.TNT);
+                tieredArrowEntity.remove(Entity.RemovalReason.DISCARDED);
+            }
             case WATER_BOTTLE -> {
                 if (!hitEntity.isOnFire()) return;
                 hitEntity.setRemainingFireTicks(1);
