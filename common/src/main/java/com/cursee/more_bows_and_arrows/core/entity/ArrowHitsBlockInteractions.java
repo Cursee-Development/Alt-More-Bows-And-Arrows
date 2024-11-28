@@ -91,14 +91,20 @@ public class ArrowHitsBlockInteractions {
             case FLINT_AND_STEEL -> CommonEffectsUtil.lightOrIgniteBlock(blockHitResult, player.level());
             case LADDER -> player.teleportTo(player.blockPosition().getX(), blockPos.relative(direction).getY(), player.blockPosition().getZ());
             case LIGHTNING_ROD -> CommonEffectsUtil.lightingCausedByPlayer(player, blockPos);
-            case NETHER_STAR -> level.explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 4.0f, Level.ExplosionInteraction.TNT);
+            case NETHER_STAR -> {
+                level.explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 4.0f, Level.ExplosionInteraction.TNT);
+                tieredArrowEntity.remove(Entity.RemovalReason.DISCARDED);
+            }
             case PAPER -> PaperEffectsUtil.randomBlockEffects(player, blockHitResult);
             case REDSTONE -> {
                 if (level.getBlockState(blockPos).hasProperty(RedStoneOreBlock.LIT)) {
                     level.setBlock(blockPos, level.getBlockState(blockPos).setValue(RedStoneOreBlock.LIT, true), Block.UPDATE_ALL_IMMEDIATE);
                 }
             }
-            case TNT -> level.explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 2.0f, Level.ExplosionInteraction.TNT);
+            case TNT -> {
+                level.explode(player, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 2.0f, Level.ExplosionInteraction.TNT);
+                tieredArrowEntity.remove(Entity.RemovalReason.DISCARDED);
+            }
             case WATER_BOTTLE -> {
 
                 if (level.getBlockState(blockPos).hasProperty(CampfireBlock.LIT)) {
